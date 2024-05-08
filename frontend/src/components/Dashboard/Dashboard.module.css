@@ -1,0 +1,61 @@
+.mainDashboard {
+  padding: 1em;
+}
+
+.userInfo h2 {
+  font-size: 2rem;
+}
+.balance {
+  margin-bottom: 0.5em;
+}
+.input {
+  margin-top: 1em;
+}
+.input input {
+  padding: 0.8em 1em 0.8em 1em;
+  width: 100%;
+  font-size: 1em;
+  border: 1px solid rgb(147, 151, 157);
+  border-radius: 8px;
+}
+
+.ul {
+  list-style-type: none;
+}
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1em;
+}
+.outputInfo {
+  display: flex;
+  align-items: center;
+}
+.userNameLogo {
+  text-transform: uppercase;
+  background: rgb(232, 232, 233);
+  padding: 0.5em;
+  border-radius: 50%;
+}
+.outputUsername {
+  margin-left: 0.3em;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.btn {
+  background: black;
+  color: white;
+  padding: 0.6em 1em 0.6em 1em;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.btn:hover {
+  color: black;
+  background: white;
+  transition: all 0.5s;
+}

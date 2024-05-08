@@ -1,0 +1,39 @@
+.logoutMain {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+}
+
+.logoutText h2 {
+  font-size: 1.8em;
+}
+
+.logoutButtons {
+  margin-top: 2em;
+  width: 100%;
+  max-width: 70%;
+  display: flex;
+  /* background: #000; */
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.logoutButtons button {
+  font-size: 1em;
+  font-weight: bold;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 2em 0.5em 2em;
+  cursor: pointer;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.logoutButtons button:hover {
+  color: black;
+  background: white;
+  transition: all 0.5s;
+}

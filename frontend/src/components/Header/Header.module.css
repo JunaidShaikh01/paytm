@@ -1,0 +1,23 @@
+.mainContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1.5em 0.5em 1em;
+  border-bottom: 1px solid lightgray;
+}
+.usersDetails {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.usersDetails p {
+  margin-left: 0.5em;
+}
+.userNameLogo {
+  text-transform: uppercase;
+  background: rgb(232, 232, 233);
+  padding: 0.5em;
+  border-radius: 50%;
+  /* border-radius: 50%; */
+}

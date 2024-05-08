@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(127, 127, 127);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subComponent {
+  background: white;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5em 2em 0.5em 2em;
+}
+.signinHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signinHeader h1 {
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0.2em;
+}
+.signinHeader p {
+  color: rgb(115, 121, 134);
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+.signinForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  line-height: 2;
+}
+
+.signinForm label {
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.signinForm input {
+  border: 1px solid rgb(147, 151, 157);
+  padding: 0.7em;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 8px;
+}
+
+.signinForm ::placeholder {
+  color: rgb(115, 121, 134);
+}
+
+.signinForm button {
+  margin-top: 1em;
+  background: rgb(24, 24, 27);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  padding: 0.8em 0 0.8em 0;
+  font-family: "Open Sans", sans-serif;
+}
+.signinFooter {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin: 1em 0 1em 0;
+}
