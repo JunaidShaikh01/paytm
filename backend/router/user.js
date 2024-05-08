@@ -106,7 +106,7 @@ userRouter.post("/signin", async (req, res) => {
     });
   } catch (error) {
     res.status(404).json({
-      msg: "Sign in failed",
+      msg: "Sign in Failed ",
     });
   }
 });
