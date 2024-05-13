@@ -1,5 +1,5 @@
 import React from "react";
-import Signup from "../components/Signup/signup";
+import Signup from "../components/Signup/Signup";
 import axios from "axios";
 import { redirect } from "react-router-dom";
 const API = import.meta.env.VITE_API;
