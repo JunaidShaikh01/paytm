@@ -5,7 +5,7 @@ export default function ListUser({ allUser, username, index }) {
   const navigate = useNavigate();
   // console.log("allUser", allUser);
   return (
-    <li className={styles.list}>
+    <li className={styles.list} key={allUser._id}>
       <div className={styles.outputInfo}>
         <div className={styles.userNameLogo}>{username?.[0]}</div>
         <p className={styles.outputUsername}>{username}</p>
