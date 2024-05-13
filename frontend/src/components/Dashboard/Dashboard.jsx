@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import UsersList from "./UsersList";
 import axios from "axios";
 import useDebounce from "../../Debounce/Debounce";
+const API = import.meta.env.VITE_API;
 
 export default function Dashboard({ balance, username, users }) {
   const [userArr, setUserArr] = useState([]);
@@ -12,15 +13,13 @@ export default function Dashboard({ balance, username, users }) {
   // console.log("userArr", userArr);
   // console.log("filetr", filter);
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/api/v1/user/bulk?filter=${debouncedFilter}`)
-      .then((responce) => {
-        if (filter.length === 0) {
-          setUserArr(users);
-        } else {
-          setUserArr(responce.data.user);
-        }
-      });
+    axios.get(`${API}user/bulk?filter=${debouncedFilter}`).then((responce) => {
+      if (filter.length === 0) {
+        setUserArr(users);
+      } else {
+        setUserArr(responce.data.user);
+      }
+    });
   }, [filter, debouncedFilter, users]);
 
   return (

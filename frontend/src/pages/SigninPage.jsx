@@ -2,6 +2,7 @@ import React from "react";
 import Signin from "../components/Signin/Signin";
 import axios from "axios";
 import { redirect } from "react-router-dom";
+const API = import.meta.env.VITE_API;
 
 export default function SigninPage() {
   return <Signin />;
@@ -18,13 +19,10 @@ export const action = async ({ request }) => {
   console.log("auth data ", authData);
 
   try {
-    const { data } = await axios.post(
-      "http://localhost:3000/api/v1/user/signin",
-      {
-        username: authData.username,
-        password: authData.password,
-      }
-    );
+    const { data } = await axios.post(`${API}user/signin`, {
+      username: authData.username,
+      password: authData.password,
+    });
 
     console.log(data.token);
 

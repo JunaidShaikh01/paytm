@@ -2,7 +2,7 @@ import React from "react";
 import Signup from "../components/Signup/signup";
 import axios from "axios";
 import { redirect } from "react-router-dom";
-
+const API = import.meta.env.VITE_API;
 export default function SignupPage() {
   return <Signup />;
 }
@@ -17,10 +17,7 @@ export const action = async ({ request }) => {
   };
   console.log("AuthData", authData);
   try {
-    const { data } = await axios.post(
-      "http://localhost:3000/api/v1/user/signup",
-      authData
-    );
+    const { data } = await axios.post(`${API}user/signup`, authData);
     console.log("Data ", data);
 
     localStorage.clear();

@@ -2,7 +2,7 @@ import React from "react";
 import Update from "../components/Update/Update";
 import axios from "axios";
 import { redirect } from "react-router-dom";
-
+const API = import.meta.env.VITE_API;
 export default function UpdatePage() {
   return <Update />;
 }
@@ -17,15 +17,11 @@ export const action = async ({ request }) => {
   // console.log("update data", updateData);
   const token = localStorage.getItem("token");
   try {
-    const { data } = axios.put(
-      "http://localhost:3000/api/v1/user/update",
-      updateData,
-      {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      }
-    );
+    const { data } = axios.put(`${API}user/update`, updateData, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
     console.log("Data", data);
     return redirect("/dashboard");
   } catch (error) {

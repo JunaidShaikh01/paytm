@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Logout.module.css";
 import axios from "axios";
+const API = import.meta.env.VITE_API;
 // import { useState } from "react";
 export default function Logout({ onClose }) {
   // const [username, setUsername] = useState("");
@@ -13,7 +14,7 @@ export default function Logout({ onClose }) {
 
   function updateFunc() {
     axios
-      .get("http://localhost:3000/api/v1/user/deleteuser", {
+      .get(`${API}user/deleteuser`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },

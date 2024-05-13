@@ -3,7 +3,7 @@ import React from "react";
 import { redirect } from "react-router-dom";
 import axios from "axios";
 import Transfer from "../components/Transfer/Transfer";
-
+const API = import.meta.env.VITE_API;
 export default function TransferPage() {
   return <Transfer />;
 }
@@ -19,7 +19,7 @@ export const action = async ({ request }) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:3000/api/v1/account/transfer",
+      `${API}account/transfer`,
 
       { to: id, amount },
       {

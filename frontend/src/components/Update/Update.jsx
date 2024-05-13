@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import styles from "./Update.module.css";
 import { Form, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
-
+const API = import.meta.env.VITE_API;
 export default function Update() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -13,16 +13,13 @@ export default function Update() {
       console.log("Username :-", username);
       const token = localStorage.getItem("token");
       try {
-        const { data } = await axios.delete(
-          "http://localhost:3000/api/v1/user/delete",
-          {
-            data: { username },
-            headers: {
-              Authorization: "Bearer " + token,
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const { data } = await axios.delete(`${API}user/delete`, {
+          data: { username },
+          headers: {
+            Authorization: "Bearer " + token,
+            "Content-Type": "application/json",
+          },
+        });
         console.log(data);
         localStorage.clear();
         return navigate("/");
